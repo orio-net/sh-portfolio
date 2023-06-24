@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Google Fonts Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shalimar&display=swap"
+    rel="stylesheet">
+
+
+  <!-- DM Sans Font -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>OrioNet - Live Portfolio</title>
+</head>
+
+<body>
+
+
+  <div class="intro-holder d-none d-xl-flex">
+
+    <div class="intro">
+      <span class="intText im">I'm </span>
+      <span class="intText letters">S</span>
+      <span class="intText letters letteri">i</span>
+      <span class="intText letters">n</span>
+      <span class="intText letters designer" style="margin-right: 30px;">a</span>
+      <span class="intText designer">D</span>
+      <span class="intText designer">e</span>
+      <span class="intText hi ">H</span>
+      <span class="intText letters">o</span>
+      <span class="intText letters designer">s</span>
+      <span class="intText letters">s</span>
+      <span class="intText letters">e</span>
+      <span class="intText hi designer letteri">i</span>
+      <span class="intText designer">g</span>
+      <span class="intText letters designer">n</span>
+      <span class="intText letters letteri">i</span>
+      <span class="intText designer">e</span>
+      <span class="intText designer">r</span>
+    </div>
+
+
+    <div class="scroll-hint">
+
+      <svg width="30" viewBox="0 0 376 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M187.964 0C239.678 0 286.673 21.1393 320.73 55.1929C354.788 89.2465 375.929 136.237 375.929 187.945V320.928C375.929 372.631 354.788 419.621 320.73 453.681C286.673 487.734 239.678 508.873 187.964 508.873C136.251 508.873 89.2557 487.734 55.1985 453.681C21.1414 419.621 0 372.631 0 320.928V187.945C0 136.237 21.1414 89.2465 55.1985 55.1929C89.2557 21.1393 136.251 0 187.964 0ZM292.866 83.0539C265.932 56.1274 228.795 39.4074 187.964 39.4074C147.134 39.4074 109.997 56.1274 83.0624 83.0539C56.1332 109.986 39.4115 147.119 39.4115 187.945V320.928C39.4115 361.754 56.1332 398.887 83.0624 425.814C109.997 452.746 147.134 469.466 187.964 469.466C228.795 469.466 265.932 452.746 292.866 425.814C319.796 398.887 336.518 361.754 336.518 320.928V187.945C336.518 147.119 319.796 109.986 292.866 83.0539Z"
+          fill="#ffffff80" />
+        <path id="mScroll" fill-rule="evenodd" clip-rule="evenodd"
+          d="M173.865 120.618C173.865 113.097 179.965 107 187.49 107C195.015 107 201.115 113.097 201.115 120.618V222.338L225.095 199.69C230.561 194.546 239.164 194.811 244.306 200.273C249.452 205.74 249.188 214.335 243.722 219.478L197.417 263.214L197.409 263.222L197.316 263.312L197.288 263.335C197.218 263.401 197.144 263.471 197.066 263.537L197.035 263.564L196.798 263.775L196.786 263.782C196.704 263.852 196.619 263.922 196.537 263.989L196.51 264.012L196.261 264.206L196.245 264.218C196.07 264.354 195.891 264.483 195.708 264.611L195.688 264.623C195.509 264.747 195.326 264.864 195.139 264.981L195.116 264.996L194.859 265.148L194.816 265.175L194.567 265.315L194.517 265.343L194.303 265.459L194.19 265.514L194.014 265.603L193.882 265.669L193.707 265.751L193.586 265.806L193.423 265.879L193.255 265.95L193.135 266L192.94 266.078L192.835 266.117L192.625 266.195L192.523 266.23L192.305 266.304L192.228 266.331L191.975 266.409L191.924 266.424L191.671 266.498L191.605 266.518L191.324 266.591H191.317C191.212 266.619 191.106 266.646 191.001 266.669C190.799 266.712 190.597 266.755 190.394 266.79L190.312 266.805L190.071 266.844L190.005 266.852L189.752 266.887L189.662 266.899L189.421 266.926L189.359 266.934L189.102 266.957L189.012 266.965L188.798 266.977L188.677 266.984L188.463 266.992L188.358 266.996L188.14 267H188H187.86L187.642 266.996L187.537 266.992L187.323 266.984L187.202 266.977L186.988 266.965L186.898 266.957L186.641 266.934L186.579 266.926L186.338 266.899L186.248 266.887L185.995 266.852L185.929 266.844L185.688 266.805L185.606 266.79C185.403 266.755 185.201 266.712 184.999 266.669C184.893 266.646 184.788 266.619 184.683 266.591H184.676L184.395 266.518L184.329 266.498L184.076 266.424L184.025 266.409L183.772 266.331L183.695 266.304L183.477 266.23L183.375 266.195L183.165 266.117L183.06 266.078L182.865 266L182.745 265.95L182.577 265.879L182.414 265.806L182.293 265.751L182.118 265.669L181.986 265.603L181.81 265.514L181.697 265.459L181.483 265.343L181.433 265.315L181.184 265.175L181.141 265.148L180.884 264.996L180.861 264.981C180.674 264.864 180.491 264.747 180.312 264.623L180.292 264.611C180.109 264.483 179.93 264.354 179.755 264.218L179.739 264.206L179.49 264.012L179.463 263.989C179.381 263.922 179.296 263.852 179.214 263.782L179.202 263.775C179.124 263.705 179.043 263.634 178.965 263.564L178.934 263.537L178.712 263.335L178.684 263.312L178.591 263.222L178.583 263.214L132.278 219.478C126.812 214.335 126.548 205.74 131.694 200.273C136.836 194.811 145.44 194.546 150.905 199.69L173.865 221.373V120.618Z"
+          fill="#ffffff90" />
+      </svg>
+
+
+      <span>Scroll down to skip</span>
+    </div>
+
+
+    <div class="repeat-btn">
+
+      <button onclick="repeat()">
+        <img src="./img/arrow-repeat.svg" width="40px" alt="Replay">
+      </button>
+
+    </div>
+
+
+  </div>
+
+
+  <header>
+
+    <div id="navigationBar" class="navigation-bar">
+
+      <div id="hamburgerMenu" class="d-sm-none hamburger-menu">
+
+        <nav class="nav-col">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#ancAbout">About</a></li>
+            <li><a href="#ancResume">Resume</a></li>
+            <li><a href="#ancPortfolio">Portfolio</a></li>
+            <li><a href="#ancContact">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center w-100">
+
+        <div class="nav-left d-flex  align-items-center justify-content-start ">
+          <a class="logo" href="./index.html">
+            <strong>orionet</strong><span style="font-size: 1.5rem; color: #ffffff79;">.dev</span>
+          </a>
+        </div>
+
+        <div class="nav-mid d-flex align-items-center justify-content-start w-100 d-none d-sm-flex">
+
+          <nav class="nav-row">
+            <ul class="d-flex">
+              <li><a href="#">Home</a></li>
+              <li><a href="#ancAbout">About</a></li>
+              <li><a href="#ancResume">Resume</a></li>
+              <li><a href="#ancPortfolio">Portfolio</a></li>
+              <li><a href="#ancContact">Contact</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="nav-right d-flex justify-content-end align-items-center px-3 d-flex d-sm-none">
+          <!-- Portfolio -->
+          <div id="hamburgerIcon" class="hamburger-icon d-flex align-items-center">
+            <div class="icon"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="background-container">
+      <div class="background-dark splash-bottom">
+
+      </div>
+
+
+      <div class="background-picture">
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="container logo-holder ">
+      <div class="row justify-content-start align-items-center d-flex">
+
+
+        <div class="col-md-8 d-flex justify-content-center justify-content-md-start">
+          <div class="logo-section d-flex flex-column justify-content-center rounded align-items-start">
+            <!-- <img class="logo-top" src="./img/logo.svg" alt="Sina Hosseini"> -->
+            <!-- LOGO -->
+
+            <h1 class="text-white w-100" style="font-weight: 700; font-size: 2.5rem;">
+              A design that <span class="rfl">reflects</span> <span class="stl">your style</span>.
+            </h1>
+            <p class="w-100 my-3"
+              style="margin-top: 0.5em; font-size: 1.6rem; font-weight: 100; letter-spacing: 0.04em; line-height: 1.4em; color: #ffffffc4;">
+              Whether you require a personal website, an advertisement design, or a project collaboration, I would be
+              delighted to hear from you.
+            </p>
+
+            <div class="call-to-action d-flex mt-3 w-100">
+              <a href="#ancContact">Let's talk</a>
+              <a href="#ancAbout">Learn more</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4 d-none d-md-flex">
+          <!-- content -->
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+    <div class=" body-container container">
+
+
+      <div class="page-header row justify-content-start align-items-start">
+
+        <div class="header-bg">
+          <!-- The Background Gradient Goes Here -->
+        </div>
+
+
+        <div class="header-left p-5 col-md-6 d-flex flex-column align-items-center align-items-sm-start ">
+
+          <h2 class=" text-white display-6 w-100">
+            <span style="font-weight: 100; ">Sina Hosseini</span><br>
+          </h2>
+
+          <h5 style="opacity: 40%; font-weight: 100;" class="text-white h2">Graphic Designer & Front-End
+            Developer</span></h5><br>
+
+
+          <!-- <p class="text-white" style="font-weight: 300;">
+            As a professional designer and front-end developer, I have expertise in creating websites that are both
+            beautiful and functional. My ambition is to become a senior developer and lead innovative projects. When I'm
+            not coding or designing, I'm making music and playing guitar.
+          </p> -->
+
+        </div>
+
+        <div class="header-right p-5 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+      <div class="page-about py-5 row justify-content-center align-items-center">
+
+        <div class="col-12 col-md-6 p-md-5 d-flex justify-content-center align-items-center">
+
+          <div class="cactus-frame">
+
+            <img class="cactus" src="./img/Cactus_Pot.svg" alt="">
+          </div>
+
+        </div>
+
+
+        <div id="ancAbout" class="col-12 col-md-6 p-5">
+
+          <h2 class="display-6">About Me</h2>
+          <p class="blockquote">
+            I am a freelance graphic and UI designer based in Shiraz/Iran. My expertise lies
+            in creating engaging and vibrant designs for web, print, and streaming platforms. I enjoy exploring
+            different
+            styles and techniques to convey stories through my designs in a visual manner.
+          </p>
+          <span class="blockquote-footer">Sina Hosseini</span>
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="main-container container-fluid d-flex flex-column align-items-center pb-5 gap-5">
+
+      <div id="ancResume" class=" px-5 justify-content-center align-items-center gap-5 gap-md-0 w-100">
+        <h2 class="post-title display-5 text-center" style="color: #bc8f8f;">Resume</h2>
+      </div>
+
+      <div class="main-row row px-5 py-0 py-md-3 justify-content-center align-items-start gap-5">
+
+
+        <div class="resume-text mw-1000 col-12 col-md-12 text-center px-1">
+
+
+
+          <h4 class=" mb-3 mb-md-4 mt-3 ">My Background</h4>
+          <p class=" blockquote">
+            <strong>Information Technology (IT)</strong> engineer, graduated from Shamsipour Technical and
+            Vocational College of Tehran
+            with <strong>over 6
+              years of experience</strong> as a graphic & UI designer.
+
+            <!-- 
+            working with various platforms and
+            frameworks such as OBS Studio, KWGT (Kustom Widget Studio), Unreal Engine 4 and Unity. -->
+
+          </p>
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+      <div class="main-row row w-100 justify-content-center align-items-start gap-5 my-0 my-md-5">
+
+        <div class="slide-col col">
+
+          <!-- Skill Slide Start -->
+          <div class="skill-slide d-flex  justify-content-center">
+
+            <div class="slide-card slide-left" id="slideLeft">
+              <div class="card-pic left-pic" id="picLeft"></div>
+            </div>
+            <!-- <div class="card-names">
+                <div class="card-name left-name"><span>Back-End</span></div>
+                <div class="card-name right-name"><span>Front-End</span></div>
+              </div> -->
+
+            <div class="slide-card slide-right" id="slideRight">
+              <div class="card-pic right-pic" id="picRight"></div>
+            </div>
+
+          </div>
+
+          <div class="art-quote text-center my-3">
+            <p class="blockquote mb-0">“Every good painter paints what he is.”</p>
+            <span class="blockquote-footer">Jackson Pollock</span>
+          </div>
+          <!-- Skill Slide Ends  -->
+
+
+        </div>
+        <div class="col">
+          <div class="container px-3">
+            <div class="row">
+              <div class="col-12 py-2">
+
+
+              </div>
+              <div class="col-12 py-2">
+
+                <!-- <h3 class="my-2 display-6" style="font-size: 2rem; color: #ffffff;">Skills & Tools</h3> -->
+
+
+                <h4 id="designTools" class="mb-4 mt-5 mt-md-0 ">Software</h4>
+                <p>
+                  I employ a diverse range of tools that enable me to design and code efficiently and effectively. These
+                  tools include software for graphic design, code editing and web development.
+                </p>
+
+
+                <ul style="list-style-type: none; color: rgba(255, 255, 255, 0.507);"
+                  class="px-0 d-flex flex-column gap-5 my-5">
+
+                  <li>
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/corel-draw.png" width="100%" alt="CorelDraw"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>Corel Draw</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 85%; background-color: #7dcc66;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li>
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/visual-studio.png" width="100%" alt="VSCode"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>Visual Studio Code</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 60%; background-color: #a88ac4;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/wordpress.png" width="100%" alt="WordPress"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>WordPress</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 75%; background-color: #2384A4;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+
+
+
+                </ul>
+
+              </div>
+
+
+              <div class="col-12 py-2">
+
+                <h4 id="codingSkills" class="mb-4 mt-2 ">Coding Skills</h4>
+                <p>
+                  I am currently expanding my knowledge of Web Development as I believe my extensive experience in
+                  design
+                  enables me to develop websites that are both appealing and functional.
+                </p>
+
+
+                <ul style="list-style-type: none; color: rgba(255, 255, 255, 0.507);"
+                  class="px-0 d-flex flex-column gap-5 my-5">
+                  <li>
+
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/html-5.png" width="100%" alt="HTML5"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>HTML 5</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 95%; background-color: #FA6430;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+                  <li>
+
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/css-3.png" width="100%" alt="CSS3"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>CSS 3</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 90%; background-color: #4CADFC;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+
+                  <li>
+
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/sass.png" width="100%" alt="SASS"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>SASS</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 70%; background-color: #D984AE;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+
+
+                  <li>
+
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/bootstrap.png" width="100%" alt="BootStrap"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>Bootstrap 5</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 85%; background-color: #684C84;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+
+
+
+                  <li>
+
+                    <div class="skill-item d-flex gap-3">
+                      <div class="skill-icon"><img src="./img/icons/js.png" width="100%" alt="JavaScript"></div>
+                      <div class="skill-info">
+                        <div class="skill-name text-white"><strong>JavaScript</strong></div>
+                        <div class="skill-level">
+                          <div class="progress-border">
+                            <div class="progress-bar" style="width: 40%; background-color: #FFFF4D;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+
+
+
+                </ul>
+
+
+                <h4 class="mb-4 mt-5">Work Experiences</h4>
+
+                <p>
+                  I started my journey with Macromedia Flash and SwishMAX, where I learned how to create 2D animations
+                  for various projects. I enjoyed the process of bringing my ideas to life on the screen. Later, I
+                  switched to Unreal Engine, a powerful tool for making 3D animations and environments. I worked as a
+                  texture creator and UI designer, and I gained valuable skills in creating realistic and immersive
+                  scenes. I also explored other aspects of Unreal Engine, such as lighting, sound, and scripting.
+                  Recently, I have been working with Corel Draw, a versatile software for graphic design. I have used it
+                  to create logos, advertisements, and stream overlay elements. Through these experiences, I have
+                  developed a passion for design and
+                  animation. I hope to continue learning and improving my skills in this field.
+                </p>
+
+                <div class="resume-text mw-1000 col-12 px-1 text-left">
+
+
+
+
+                  <ul class="p-0 mt-5">
+                    <li>
+                      <div class="exp-name">
+                        <strong>Freelance Graphic Designer</strong>
+                        <span class="exp-desc">(2019 &minus; Present)</span>
+                      </div>
+                      <div class="exp-resp">
+                        <ul class="p-0 pt-2 pb-4 d-flex gap-2 text-center justify-content-start align-items-center">
+                          <li>Logo Design</li>
+                          <li>Stream Overlay</li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <div class="exp-name">
+                      <strong>3D Game Development</strong>
+                      <span class="exp-desc">(2015 &minus; 2016)</span>
+                    </div>
+                    <div class="exp-resp">
+                      <ul class="p-0 pt-2 pb-4 d-flex gap-2 text-center justify-content-start align-items-center">
+                        <li>UI & HUD Design</li>
+                        <li>Texture Design</li>
+                        <li>Level Design</li>
+                      </ul>
+                    </div>
+                    </li>
+                    <li>
+
+                    </li>
+
+                    <li>
+                      <div class="exp-name">
+                        <strong>Kitchen Cabinet Maker & Interior Designer</strong>
+                        <span class="exp-desc">(2011 &minus; 2017)</span>
+                      </div>
+                      <div class="exp-resp">
+                        <ul class="p-0 pt-2 pb-4 d-flex gap-2 text-center justify-content-start align-items-center">
+                          <li>Customer Facing</li>
+                          <li>3D Design & Execution </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+
+                    </li>
+
+                  </ul>
+
+
+
+
+                </div>
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+
+      <div class="main-row row px-5 py-3 justify-content-center align-items-center">
+        <h4 class=" mt-3 h3">Why Work with Me?</h4>
+
+        <p class="blockquote ">
+          My personality traits, enhance my performance
+          in design. I am always eager to learn new technologies and tools, collaborate with others, find creative
+          solutions and explore new possibilities.
+        </p>
+
+
+        <ul class="trait-list d-flex pt-3 pb-3 gap-4 justify-content-evenly flex-wrap" style="list-style-type: none;">
+          <li class=""><img src="./img/icons/Personality/curious.svg" alt="Innovative">
+            <div class="trait-name">Creative</div>
+          </li>
+          <li class=""><img src="./img/icons/Personality/problem-solver.svg" alt="Problem-Solver">
+            <div class="trait-name">Problem-Solver</div>
+          </li>
+
+          <li class=""><img src="./img/icons/Personality/communicative.svg" alt="Communicative">
+            <div class="trait-name">Communicative</div>
+          </li>
+        </ul>
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class=" portfolio-container container-fluid mt-2 mt-md-5">
+      <div class="container py-5 px-2 px-md-5">
+
+        <div id="ancPortfolio" class="row justify-content-start align-items-start pt-5">
+          <h2 class="display-6">Portfolio</h2>
+          <p class="blockquote">
+            The following section showcases some of the projects that I have completed recently. These projects involve
+            designing logos, stream overlay elements, advertisement cards and websites.
+          </p>
+        </div>
+
+
+
+
+
+        <div class="row my-2 my-md-5 pt-3 gy-4 justify-content-start align-items-start">
+
+          <h4>Web Design</h4>
+
+
+          <div class="col-12">
+            <div class="portfolio-thumbnail">
+
+              <div class="portfolio-thumbnail-image" style="
+                background-image: url('./img/portfolio/english-with-eli.png');
+                ">
+              </div>
+              <div class="portfolio-thumbnail-cover">
+                <span>English with Eli</span>
+                <p>English Teacher Personal Website</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="thumbnails row mb-5 gy-4 justify-content-start align-items-start">
+
+
+            <div class="left-col col-12 col-md-4 d-flex flex-column gap-4">
+              <div class="col-12 d-flex justify-content-center portfolio-flyer">
+                <img src="./img/portfolio/logos/elhs-zaban.png" loading="lazy" alt="">
+              </div>
+
+            </div>
+            <div class="mid-col col-12 col-md-4  d-flex flex-column gap-4">
+
+              <div class="col-12  d-flex justify-content-center portfolio-flyer">
+                <img src="./img/portfolio/logos/shahow-flyer.png" loading="lazy" alt="">
+              </div>
+
+              <div class="col-12   d-flex justify-content-center portfolio-flyer">
+                <img src="./img/portfolio/logos/eden-underpass.png" loading="lazy" alt="">
+              </div>
+
+
+
+            </div>
+            <div class="right-col col-12 col-md-4 d-flex flex-column gap-4">
+
+
+
+
+              <div class="col-12 d-flex justify-content-center portfolio-flyer">
+                <img src="./img/portfolio/logos/tannaz-hs.png" loading="lazy" alt="">
+              </div>
+
+              <div class="col-12 d-flex justify-content-center portfolio-flyer">
+                <img src="./img/portfolio/logos/prescription-paper.png" loading="lazy" alt="">
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <div style="height: 30lvh;"></div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+  <footer id="ancContact">
+    <div class="contact">
+      <span class="pb-5" style=" letter-spacing: 4px;  font-weight: 100; font-size: 3rem;">Contact Me</span>
+      <span style=" letter-spacing: 2px; font-weight: 100; font-size: 1.5rem; color: rgba(255, 255, 255, 0.555);">Phone:
+      </span>
+      <span class="pb-4" style="  font-weight: 100; font-size: 1.5rem; color: rgb(255, 255, 255);">+98 &#40;918&#41; 520
+        6228</span>
+
+
+      <br>
+      <span
+        style="letter-spacing: 2px;  font-weight: 100; font-size: 1.5rem; color: rgba(255, 255, 255, 0.555);">E-Mail:
+      </span>
+      <span style="  font-weight: 100; font-size: 1.5rem; color: rgb(255, 255, 255);">sinah.soft@live.com</span>
+
+
+      <br>
+
+
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="./js/main.js"></script>
+
+
+
+</body>
+
+</html>
