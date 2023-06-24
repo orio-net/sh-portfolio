@@ -302,19 +302,60 @@ const cardFadeUp = gsap.utils.toArray('.fade-up');
 cardFadeUp.forEach(card => {
 
   gsap.from(card, {
-    duration: 0.8,
+    duration: 1,
     opacity: 0,
-    y:50,
+    y:100,
     stagger: 0.2,
+    ease: 'power4.out',
     scrollTrigger: {
       trigger: card,
-      start: 'bottom 80%',
-      end: 'center 0%',
+      start: 'top 70%',
+      end: 'bottom 0%',
 
       // markers:true
     }
   })
 });
+
+
+const cardFadeLeft = gsap.utils.toArray('.fade-left');
+cardFadeLeft.forEach(card => {
+
+  gsap.from(card, {
+    duration: 1,
+    opacity: 0,
+    x:100,
+    stagger: 0.2,
+    ease: 'power4.out',
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 70%',
+      end: 'bottom 0%',
+
+      // markers:true
+    }
+  })
+});
+
+const cardFadeRight = gsap.utils.toArray('.fade-right');
+cardFadeRight.forEach(card => {
+
+  gsap.from(card, {
+    duration: 1,
+    opacity: 0,
+    x:-100,
+    stagger: 0.2,
+    ease: 'power4.out',
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 70%',
+      end: 'bottom 0%',
+
+      // markers:true
+    }
+  })
+});
+
 
 
 // gsap.to('.splash-top', {
