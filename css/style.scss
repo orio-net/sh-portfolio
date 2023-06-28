@@ -23,7 +23,7 @@ $color-accent: #90b690;
 }
 
 
-html{
+html {
   scroll-padding: 5rem;
 }
 
@@ -68,7 +68,7 @@ p {
 .splash-bottom {
   // display: none;
   // opacity: 0;
-  mask-image: url('../img/bottom-splash.svg');
+  mask-image: url('../img/bottom-splash.webp');
   mask-size: 0%;
   mask-repeat: no-repeat;
   mask-position: bottom;
@@ -254,7 +254,7 @@ p {
   // border-bottom: solid rgba(255, 255, 255, 0.075) 0px;
   overflow-x: scroll;
   gap: 2rem;
-  transition: 300ms;
+  transition: 200ms;
 
 
   -ms-overflow-style: none;
@@ -298,7 +298,7 @@ p {
 
             &:hover {
               color: $color-accent;
-              
+
             }
           }
 
@@ -527,7 +527,7 @@ p {
           backdrop-filter: blur(5px);
         }
 
-        &:hover{
+        &:hover {
           outline: solid #ffffff31 5px;
 
         }
@@ -573,8 +573,8 @@ p {
     background: rgb(61, 96, 122);
     box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.637), inset 0 0 50px rgb(0, 0, 0);
     // background-image: url('https://images.vexels.com/content/221367/preview/starry-night-sky-background-design-5d346b.png');
-    background-image: url('../img/bg.png');
-    // background-image: url('../img/bg.webp');
+    // background-image: url('../img/bg.png');
+    background-image: url('../img/bg.webp');
     background-position: bottom;
     background-size: cover
   }
@@ -690,7 +690,8 @@ main {
 
     margin-top: -50px;
     margin-left: 200px;
-    width: 250px;
+    width: 170px;
+    height: 260px;
 
   }
 }
@@ -982,119 +983,87 @@ main {
 
 
 .portfolio-container {
-  background: #201f24;
+  // background: #201f24;
   color: white;
-  border-top: solid #ffffff1a 4px;
-  box-shadow: -5px 5px 15px #00000086, 0 0 5px #00000050;
-  overflow: hidden;
+  // border-top: solid #ffffff1a 4px;
+  // box-shadow: -5px 5px 15px #00000086, 0 0 5px #00000050;
+  // overflow: hidden;
   position: relative;
+  isolation: isolate;
   // margin-bottom: 50px;
   // padding: 50px 30px;
-
-  img {
-    // border-radius: 15px 15px 15px 15px;
-    border: solid rgba(255, 255, 255, 0.171) 5px;
-    box-shadow: 0 0 5px black;
-    width: 100%;
-    // height: 30vh;
-    object-fit: cover;
-    object-position: top;
-    transition: 200ms;
-  }
+  // height: 300lvh;
 
 
-
-
-  .portfolio-thumbnail {
-
-
-
-    // background-color: #fff;
+  .portfolio-frame {
+    
     position: relative;
+    isolation: isolate;
+    // background-color: #ffffff63;
+    height: 100lvh;
 
-    border-radius: 15px 15px 2px 2px;
-    border: solid rgba(255, 255, 255, 0.171) 5px;
-    box-shadow: 0 0 5px black;
-    height: 50lvh;
-    width: 100%;
-    overflow: hidden;
-
-    .portfolio-thumbnail-image {
-      box-shadow: inset 0 0 10px black;
-      z-index: 1;
-      position: absolute;
-      inset: 0 0 0 0;
-      filter: brightness(120%);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top;
-
-    }
-
-    .portfolio-thumbnail-cover {
-      z-index: 2;
-      position: absolute;
-      inset: 0 0 0 0;
-      // background-color: #6dd1ffbe;
-      // backdrop-filter: saturate(50%) blur(10px) brightness(90%);
-      background: linear-gradient(rgba(0, 0, 0, 0), rgb(2, 2, 2));
-      padding: 0px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      transition: 500ms;
-      transition-property: backdrop-filter;
-
-      span {
-        font-size: medium;
-        font-weight: 500;
-
-      }
-
-      p {
-
-        font-size: small;
-        font-weight: 300;
-      }
-
-      &:hover {
-        backdrop-filter: saturate(70%) blur(0px) brightness(100%);
-      }
-    }
-
-    .portfolio-thumbnail-cover-soon {
-      z-index: 2;
-      position: absolute;
-      inset: 0 0 0 0;
-      background-color: rgba(36, 36, 36, 0.548);
-      color: #ffffff31;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .portfolio-holder {
+      // backdrop-filter: blur(20px);
+      // background-color: #ffffff05;
+      // border-radius: 15px;
+      // border: solid rgba(255, 255, 255, 0.212) 1px;
+      // overflow: hidden;
+      // position: sticky;
+      // overflow: hidden;
+      // background-color: rgba(206, 206, 206, 0.123);
+      top: 100px;
+      height: 85lvh;
 
 
-      span {
-        font-size: 2rem;
-        font-weight: 100;
-      }
 
-      p {
-        font-size: large;
-        font-weight: 100;
-        color: #ffffff31;
-      }
     }
   }
 
+
+  .thumbnail-bg{
+
+    .thumbnail-container{
+      $phone-border: #292929;
+      height: 700px;
+      width: 350px;
+      border-radius: 25px;
+      border: solid 5px $phone-border;
+      background-color: $phone-border;
+      border-block-width: 15px;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.507);
+      // transform: perspective(2000px) rotateY(-10deg) rotateX(10deg);
+      
+      .thumbnail-holder{
+        padding: 2rem;
+        border-radius: 25px;
+        background-color: #1a1a1a;
+        inset: 0;
+        position: absolute;
+        overflow: hidden;
+        
+        .thumbnail{
+          
+          position: absolute;
+          inset: 0;
+          background: url('../img/portfolio/english-with-eli-mob.jpeg');
+          background-size: cover;
+          background-position: top;
+        }
+        
+      }
+      
+    }
+    
+    
+  }
+  
 }
 
-
-
-
-
-.contact {
+  
+  
+  
+  .contact {
   backdrop-filter: blur(5px);
   opacity: 0;
   pointer-events: none;

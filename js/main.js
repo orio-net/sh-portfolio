@@ -190,7 +190,7 @@ gsap.to('.background-picture ', {
 
 
 gsap.from('.navigation-bar ', {
-  // duration: 0.5,
+  duration: 0.5,
   scrollTrigger: {
     trigger: 'body',
     start: '1% 0%',
@@ -422,21 +422,56 @@ gsap.from('.progress-bar', {
   }
 })
 
-gsap.to('.portfolio-thumbnail-image', {
-
-  duration: 10,
+gsap.from('.eli', {
+  opacity: 0,
+  duration: 1,
+  x:'50%',
   stagger: 0.2,
-  backgroundPositionY: '100%',
   scrollTrigger: {
-    trigger: '.portfolio-thumbnail-image',
-    start: 'top 50%',
-    end: 'bottom 0%',
+    trigger: '.portfolio-frame',
+    start: '0% 50%',
+    end: '90% 0%',
 
-
-    scrub: 3,
+    // scrub: true,
     // markers: true
   }
 })
+
+
+
+// gsap.from('.portfolio-holder', {
+//   top: '50%',
+//   borderRadius: '150px',
+//   height: '150px',
+//   width: '150px',
+//   stagger: true,
+//   scrollTrigger: {
+//     trigger: '.portfolio-frame',
+//     start: '0% 20%',
+//     end: '20% 0%',
+
+//     scrub: 1,
+//     markers: true
+//   }
+// })
+
+
+gsap.fromTo('.thumbnail-container', {
+  y:'300px',
+},
+{
+  y:'-300px',
+  scrollTrigger: {
+    trigger: '.thumbnail-container',
+    start: '0% 100%',
+    end: '50% 0%',
+
+    scrub: true,
+    // markers: true
+  }
+}
+
+)
 
 
 // gsap.from('.left-col', {
