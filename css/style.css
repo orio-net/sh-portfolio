@@ -74,6 +74,14 @@ p {
           mask-position: bottom;
 }
 
+.loading-container {
+  position: fixed;
+  height: 100lvh;
+  width: 100%;
+  background-color: #000000;
+  z-index: 50;
+}
+
 .intro-holder {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -178,10 +186,9 @@ p {
   z-index: 5;
   color: white;
   font-weight: 100;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4588235294) 100%);
   overflow-x: scroll;
   gap: 2rem;
-  transition: 200ms;
+  transition: background-color 200ms ease-out;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -220,7 +227,7 @@ p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.466);
 }
 .navigation-bar .hamburger-menu .nav-col ul li a:hover {
-  color: #9482b1;
+  color: #8ab182;
 }
 .navigation-bar .hamburger-menu-extended {
   height: calc(100lvh - 65px);
@@ -305,7 +312,7 @@ p {
   transition: 200ms;
 }
 .navigation-bar .nav-row ul a:hover {
-  background-color: #9482b1;
+  background-color: #8ab182;
   color: white;
 }
 
@@ -340,7 +347,7 @@ p {
           backdrop-filter: blur(1px);
 }
 .logo-holder .logo-section .stl {
-  color: #9482b1;
+  color: #8ab182;
   isolation: isolate;
   position: relative;
 }
@@ -359,7 +366,7 @@ p {
   outline: solid rgba(255, 255, 255, 0.1921568627) 0px;
 }
 .logo-holder .logo-section .call-to-action a:first-child {
-  background-color: #9482b1;
+  background-color: #8ab182;
   margin-right: 15px;
 }
 .logo-holder .logo-section .call-to-action a:last-child {
@@ -379,13 +386,16 @@ p {
   left: 0;
   z-index: -1;
   display: flex;
-  background: radial-gradient(#1d1d1d, #1b1b1b);
+  background: url("../img/cactus-model-full.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .background-container .background-dark {
   position: absolute;
   z-index: 2;
   background-image: url("../img/bg-blur.webp");
   background-size: cover;
+  background-repeat: no-repeat;
   filter: brightness(40%) saturate(60%);
   inset: 0 0 -500px 0;
 }
@@ -394,8 +404,10 @@ p {
   position: absolute;
   height: 100%;
   width: 100%;
-  filter: brightness(80%) saturate(60%);
-  background: linear-gradient(45deg, rgb(76, 14, 105), #312c47, #1e1b29);
+  filter: brightness(50%) saturate(60%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: linear-gradient(45deg, rgb(36, 36, 36), rgba(49, 44, 71, 0.5764705882), rgba(0, 0, 0, 0));
   box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.637), inset 0 0 50px rgb(0, 0, 0);
   background-position: bottom;
   background-size: cover;
@@ -403,8 +415,8 @@ p {
 
 main .body-container {
   background-color: rgba(148, 148, 148, 0.0666666667);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(35px);
+          backdrop-filter: blur(35px);
   border-radius: 15px;
   border: solid rgba(255, 255, 255, 0.1019607843) 4px;
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5254901961), 0 0 5px rgba(0, 0, 0, 0.3137254902);
@@ -715,10 +727,10 @@ main .body-container .page-about {
 
 @media only screen and (max-width: 1200px) {
   .navigation-bar {
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.411);
-    padding: 0rem 2rem;
+    -webkit-backdrop-filter: blur(10px) !important;
+            backdrop-filter: blur(10px) !important;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.411) !important;
+    padding: 0rem 2rem !important;
   }
 }
 @media only screen and (min-width: 575px) {

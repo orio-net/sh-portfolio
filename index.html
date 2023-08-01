@@ -30,13 +30,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
 
+
   <link rel="stylesheet" href="./css/style.css">
 
   <title>OrioNet - Live Portfolio</title>
 </head>
 
-<body>
+<body onload='derp()'>
 
+  <div class="loading-container  text-white display-1 d-flex align-items-center justify-content-center">
+
+    <span style="font-weight: 100; letter-spacing: 0.2em;">Loading...</span>
+
+  </div>
 
   <div class="intro-holder d-none d-xl-flex">
 
@@ -165,7 +171,7 @@
 
 
         <div class="col-md-8 d-flex justify-content-center justify-content-md-start">
-          <div class="logo-section d-flex flex-column justify-content-center rounded align-items-start">
+          <div class="logo-section d-flex flex-column justify-content-center rounded align-items-start p-3 p-sm-0">
             <!-- <img class="logo-top" src="./img/logo.svg" alt="Sina Hosseini"> -->
             <!-- LOGO -->
 
@@ -213,7 +219,7 @@
         </div>
 
 
-        <div class="header-left p-5 col-md-6 d-flex flex-column align-items-center align-items-sm-start ">
+        <div class="header-left p-5 col-md-6 d-flex flex-column  align-items-sm-start ">
 
           <h2 class=" text-white display-6 w-100">
             <span style="font-weight: 100; ">Sina Hosseini</span><br>
@@ -285,7 +291,7 @@
     <div class="main-container container-fluid d-flex flex-column align-items-center pb-5 gap-5">
 
 
-      <div class="py-5 py-md-5 my-5 fade-up">
+      <div class="py-5 px-3 my-5 fade-up">
         <div id="ancResume" class=" px-1 px-md-5">
           <h2 class="post-title text-sm-center" style="color: #ffffff21; font-weight: 100; font-size: 6rem;">Resume</h2>
           <p class=" blockquote mw-1000 text-sm-center" style="font-size: 2rem; line-height: 1.2em;">

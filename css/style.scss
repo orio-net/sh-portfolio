@@ -1,5 +1,5 @@
 $shade-base: #2b2a30;
-$color-accent: #9482b1;
+$color-accent: #8ab182;
 
 /* width */
 ::-webkit-scrollbar {
@@ -77,7 +77,13 @@ p {
 
 }
 
-
+.loading-container{
+  position: fixed;
+  height: 100lvh;
+  width: 100%;
+  background-color: #000000;
+  z-index: 50;
+}
 
 .intro-holder {
   user-select: none;
@@ -252,12 +258,11 @@ p {
   z-index: 5;
   color: white;
   font-weight: 100;
-  background: linear-gradient(0deg, #00000000 0%, #00000075 100%);
+  // background: linear-gradient(0deg, #00000000 0%, #00000075 100%);
   // border-bottom: solid rgba(255, 255, 255, 0.075) 0px;
   overflow-x: scroll;
   gap: 2rem;
-  transition: 200ms;
-
+  transition: background-color 200ms ease-out;
 
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -266,6 +271,10 @@ p {
   &::-webkit-scrollbar {
     display: none;
   }
+
+
+
+
 
   .hamburger-menu {
     height: 0;
@@ -298,7 +307,7 @@ p {
             transition: 200ms;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.466);
 
-            &:hover {
+            &:hover{
               color: $color-accent;
 
             }
@@ -409,6 +418,7 @@ p {
   }
 
   .nav-row {
+
 
     ul {
       font-size: 1.3rem;
@@ -531,7 +541,6 @@ p {
 
         &:hover {
           outline: solid #ffffff31 5px;
-
         }
       }
     }
@@ -548,9 +557,12 @@ p {
   left: 0;
   z-index: -1;
   display: flex;
-  background: radial-gradient(#1d1d1d, #1b1b1b);
+  background: url('../img/cactus-model-full.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background: radial-gradient(#1d1d1d, #1b1b1b);
   // background-color: black;
-
+  
   .background-dark {
     // display: none;
     position: absolute;
@@ -558,6 +570,7 @@ p {
     // background: radial-gradient(#161c20e5, #0f1316);
     background-image: url('../img/bg-blur.webp');
     background-size: cover;
+    background-repeat: no-repeat;
     // background-position-y: -250px;
     filter: brightness(40%) saturate(60%);
     inset: 0 0 -500px 0;
@@ -571,8 +584,9 @@ p {
     position: absolute;
     height: 100%;
     width: 100%;
-    filter: brightness(80%) saturate(60%);
-    background: linear-gradient(45deg, rgb(76, 14, 105), #312c47, #1e1b29);
+    filter: brightness(50%) saturate(60%);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(45deg, rgb(36, 36, 36), #312c4793, #00000000);
     box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.637), inset 0 0 50px rgb(0, 0, 0);
     // background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa2BDNwTPxrsWiwwsA2m9vkA_XLfRlc4sptAFPo63M5PhR6qU2WpkLGnmwz_qIKeFlgVM&usqp=CAU');
     // background-image: url('../img/bg.png');
@@ -597,7 +611,7 @@ main {
 
 
     background-color: #94949411;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(35px);
     border-radius: 15px;
     border: solid #ffffff1a 4px;
     box-shadow: -5px 5px 15px #00000086, 0 0 5px #00000050;
@@ -985,7 +999,7 @@ main {
 
 
   .portfolio-frame {
-    
+
     position: relative;
     isolation: isolate;
     // background-color: #ffffff63;
@@ -1009,9 +1023,9 @@ main {
   }
 
 
-  .thumbnail-bg{
+  .thumbnail-bg {
 
-    .thumbnail-container{
+    .thumbnail-container {
       $phone-border: #292929;
       height: 700px;
       width: 350px;
@@ -1022,37 +1036,37 @@ main {
       position: relative;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.507);
       transform: perspective(100cm) rotateY(-10deg);
-      
-      .thumbnail-holder{
+
+      .thumbnail-holder {
         padding: 2rem;
         border-radius: 25px;
         background-color: #1a1a1a;
         inset: 0;
         position: absolute;
         overflow: hidden;
-        
-        .thumbnail{
-          
+
+        .thumbnail {
+
           position: absolute;
           inset: 0;
           background: url('../img/portfolio/english-with-eli-mob.jpeg');
           background-size: cover;
           background-position: top;
         }
-        
+
       }
-      
+
     }
-    
-    
+
+
   }
-  
+
 }
 
-  
-  
-  
-  .contact {
+
+
+
+.contact {
   backdrop-filter: blur(5px);
   opacity: 0;
   pointer-events: none;
@@ -1074,12 +1088,15 @@ main {
 @media only screen and (max-width: 1200px) {
 
   .navigation-bar {
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.411);
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.411) !important;
     // border-bottom: solid rgb(46, 46, 46) 1px;
-    padding: 0rem 2rem;
+    padding: 0rem 2rem !important;
 
   }
+
+
+  
 
 }
 
@@ -1090,11 +1107,8 @@ main {
     background: linear-gradient(0deg, #00000000 0%, #00000075 100%);
   }
 
+
 }
-
-
-
-
 
 @media only screen and (max-width: 575px) {
 
@@ -1105,6 +1119,8 @@ main {
   }
 
 }
+
+
 
 
 @media only screen and (max-width: 794px) {

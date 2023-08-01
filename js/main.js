@@ -59,115 +59,18 @@ hamburgerIcon.classList.toggle('icon-open');
 // Scroll Trigger GSAP
 
 
-var tl = gsap.timeline({
-  defaults: {
-    duration: 0.01,
-    opacity: 0,
-    ease: 'none',
-  }
-})
-
-var sch = gsap.timeline({
-  defaults: {
-    duration: 1,
-  }
-})
-
-
-sch.to('#mScroll', {
-  duration: 0.5,
-  y: 45,
-  repeat: -1,
-  yoyo: true
-})
-
-sch.from('.scroll-hint', {
-  opacity: 0,
-  delay: 0.5,
-  duration: 3,
-  y: 50,
-  ease: 'elastic.out(1, 0.3)'
-
-})
-
-
-sch.from('.repeat-btn', {
-  opacity: 0,
-  delay: 2,
-  duration: 3,
-  x: -50,
-  ease: 'elastic.out(1, 0.3)'
-
-})
-
-tl.to('.hi', {
-  opacity: 1,
-})
-
-
-
-tl.to('.letters', {
-  opacity: 1,
-  width: '80px',
-  color: '#ffffff',
-}, '=2')
-
-tl.to('.hi', {
-  width: '100px',
-  color: '#ffffff',
-  opacity: 1,
-
-})
-
-tl.to('.im', {
-  opacity: 1,
-  width: '200px',
-  color: '#ffffff',
-})
 
 
 
 
-tl.to('.im', {
-  opacity: 1,
-  width: '210px',
-  color: '#ffffff',
-}, '=3')
-
-
-tl.to('.letters', {
-  width: '0px',
-  color: '#ffffff',
-  opacity: 0,
-
-})
-
-tl.to('.hi', {
-  opacity: 0,
-  width: '0px',
-  color: '#ffffff',
-})
-
-
-tl.to('.designer', {
-  opacity: 1,
-  width: '80px',
-  color: '#ffffff',
-})
-
-
-
-
-
-gsap.to('.background-picture ', {
-  scale: 1.1,
+gsap.to('.background-container ', {
+  scale: 1.7,
+  backgroundPositionY: 150,
   duration: 0.5,
   scrollTrigger: {
     trigger: 'body',
     start: 'top 0%',
-    toggleActions: 'play play play reverse',
-
-    scrub: 1,
+    scrub: true,
     // markers:true
   }
 })
@@ -176,7 +79,8 @@ gsap.to('.background-picture ', {
 
 
 gsap.to('.background-picture ', {
-  opacity: 0,
+  // opacity: 0,
+  // backgroundColor: 'black',
   duration: 0.5,
   scrollTrigger: {
     trigger: '.body-container',
@@ -189,16 +93,21 @@ gsap.to('.background-picture ', {
 })
 
 
-gsap.from('.navigation-bar ', {
+gsap.to('.navigation-bar ', {
   duration: 0.5,
+
+
+  padding: '0vh 2rem',
+  backdropFilter: 'blur(10px)',
+  boxShadow: '0 0 5px rgba(0, 0, 0, 0.726)',
+
   scrollTrigger: {
     trigger: 'body',
-    start: '1% 0%',
+    start: '0% 0%',
+    end: '5% 0%',
+    scrub: true,
     // markers:true,
-    toggleClass: {
-      targets: '.navigation-bar',
-      className: 'navigation-bar-hover'
-    }
+
   }
 })
 
@@ -206,11 +115,11 @@ gsap.from('.navigation-bar ', {
 
 
 gsap.to('.cactus-frame', {
-  backgroundPositionX: '-150px',
+  backgroundPositionX: '-200px',
   scrollTrigger: {
     trigger: '.cactus-frame',
     start: 'top 100%',
-
+    end: 'bottom 0%',
     scrub: 2,
     // markers: true
   }
@@ -218,10 +127,11 @@ gsap.to('.cactus-frame', {
 
 
 gsap.to('.cactus', {
-  x: -150,
+  x: -200,
   scrollTrigger: {
     trigger: '.cactus-frame',
     start: 'top 100%',
+    end: 'bottom 0%',
 
 
     scrub: 2,
@@ -533,10 +443,120 @@ gsap.to('.contact', {
   }
 })
 
+
+var tl = gsap.timeline({
+  defaults: {
+    duration: 0.01,
+    opacity: 0,
+    ease: 'none',
+  }
+})
+
+var sch = gsap.timeline({
+  defaults: {
+    duration: 1,
+  }
+})
+
+function derp(){
+  gsap.to('.loading-container', {
+    duration: 0.5,
+    opacity: 0,
+    pointerEvents: 'none',
+  })
+
+
+
+  
+  sch.to('#mScroll', {
+    duration: 0.5,
+    y: 45,
+    repeat: -1,
+    yoyo: true
+  })
+  
+  sch.from('.scroll-hint', {
+    opacity: 0,
+    delay: 0.5,
+    duration: 3,
+    y: 50,
+    ease: 'elastic.out(1, 0.3)'
+  
+  })
+  
+  
+  sch.from('.repeat-btn', {
+    opacity: 0,
+    delay: 2,
+    duration: 3,
+    x: -50,
+    ease: 'elastic.out(1, 0.3)'
+  
+  })
+  
+  tl.to('.hi', {
+    opacity: 1,
+  })
+  
+  
+  
+  tl.to('.letters', {
+    opacity: 1,
+    width: '80px',
+    color: '#ffffff',
+  }, '=2')
+  
+  tl.to('.hi', {
+    width: '100px',
+    color: '#ffffff',
+    opacity: 1,
+  
+  })
+  
+  tl.to('.im', {
+    opacity: 1,
+    width: '200px',
+    color: '#ffffff',
+  })
+  
+  
+  
+  
+  tl.to('.im', {
+    opacity: 1,
+    width: '210px',
+    color: '#ffffff',
+  }, '=3')
+  
+  
+  tl.to('.letters', {
+    width: '0px',
+    color: '#ffffff',
+    opacity: 0,
+  
+  })
+  
+  tl.to('.hi', {
+    opacity: 0,
+    width: '0px',
+    color: '#ffffff',
+  })
+  
+  
+  tl.to('.designer', {
+    opacity: 1,
+    width: '80px',
+    color: '#ffffff',
+  })
+  
+  
+  
+}
 function repeat() {
 
   tl.play(0.1);
 }
+
 
 // gsap.to('.body-container ', {
 //   border: 'solid black 0px',
